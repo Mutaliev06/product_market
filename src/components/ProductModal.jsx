@@ -32,15 +32,15 @@ function ProductModal() {
             Описание:
           </h3>
           <p>
-            <h5 className="d-inline-block">
+            <span className="d-inline-block h5">
               Количество калорий:
-            </h5>
+            </span>
             &nbsp;{product.ccal}
           </p>
           <p>
-            <h5 className="d-inline-block">
+            <span className="d-inline-block h5">
               Дата изготовления:
-            </h5>
+            </span>
             &nbsp;{product.date}
           </p>
         </div>

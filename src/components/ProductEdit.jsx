@@ -25,9 +25,9 @@ function ProductEdit( { product, setIsEditing } ) {
 
   return (
     <tr>
-      <th scope="row">
+      <td>
         {product.id}
-      </th>
+      </td>
       <td>
         <input
           className="form-control"

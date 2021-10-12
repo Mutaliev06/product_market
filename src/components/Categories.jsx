@@ -16,7 +16,6 @@ function Categories(props) {
     });
   });
 
-
   useEffect(() =>{
     dispatch(loadCategories())
   }, [dispatch]) ;
@@ -46,32 +45,32 @@ function Categories(props) {
         </tr>
         </thead>
         <tbody>
-        {categories?.map(item => {
-          return (
-            <tr>
-              <th scope="row">
-                <a className="nav-link" href={`/category/${item.id}`}>
-                  {item.id}
-                </a>
-              </th>
-              <td>
-                <a className="nav-link" href={`/category/${item.id}`}>
-                  {item.name}
-                </a>
-              </td>
-              <td>
-                <a className="nav-link" href={`/category/${item.id}`}>
-                  {item.unit}
-                </a>
-              </td>
-              <td>
-                <a className="nav-link" href={`/category/${item.id}`}>
-                  {item.count}
-                </a>
-              </td>
-            </tr>
-          )
-        })}
+          {categories?.map(item => {
+            return (
+              <tr key={item.id}>
+                <td>
+                  <a className="nav-link" href={`/category/${item.id}`}>
+                    {item.id}
+                  </a>
+                </td>
+                <td>
+                  <a className="nav-link" href={`/category/${item.id}`}>
+                    {item.name}
+                  </a>
+                </td>
+                <td>
+                  <a className="nav-link" href={`/category/${item.id}`}>
+                    {item.unit}
+                  </a>
+                </td>
+                <td>
+                  <a className="nav-link" href={`/category/${item.id}`}>
+                    {item.count}
+                  </a>
+                </td>
+              </tr>
+            )
+          })}
         </tbody>
       </table>
     </div>

@@ -47,13 +47,14 @@ function Products(props) {
             product={product}
           />;
         })}
-        <Pagination
-          productsOnPage = {productsOnPage}
-          totalProducts = {product.length}
-          paginate = {paginate}
-        />
         </tbody>
       </table>
+      <Pagination
+        countPage = {countPage}
+        productsOnPage = {productsOnPage}
+        totalProducts = {product.length}
+        paginate = {paginate}
+      />
     </div>
   )
 }

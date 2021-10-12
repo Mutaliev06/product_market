@@ -88,10 +88,6 @@ export const deleteProduct = (productId) => {
   return async (dispatch) => {
     dispatch({ type: "products/delete/pending" });
 
-    await fetch(`http://62.109.7.98/api/product/${productId}`, {
-      method: "DELETE",
-    });
-
     dispatch({ type: "products/delete/fulfilled", payload: productId });
   };
 };
@@ -99,14 +95,6 @@ export const deleteProduct = (productId) => {
 export const editProduct = (productId, data) => {
   return async (dispatch) => {
     dispatch({ type: "products/edit/pending" });
-
-    await fetch(`http://62.109.7.98/api/product/${productId}`, {
-      method: "PATCH",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    });
 
     dispatch({ type: "products/edit/fulfilled", payload: { productId, data } });
   };
